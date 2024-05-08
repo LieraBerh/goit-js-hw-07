@@ -25,16 +25,15 @@ const images = [
   },
 ];
 
-function imgTemplate(imgObj) {
-  return `<li><img url = "${imgObj.url}", alt = "${imgObj.alt}", class = "js-images-list-item" ></img></li>`;
-}
+const gallery = document.querySelector('.gallery');
 
-function imagesTemplate(images) {
-  return images.map(imgTemplate).join('\n');
-}
+const markup = images
+  .map(
+    image =>
+      `<li class = "js-images-list-item"><img src = "${image.url}", alt = "${image.alt}" ></img></li>`
+  )
+  .join('\n');
 
-const galleryMarkup = imagesTemplate(images);
+console.log(markup);
 
-const galleryList = document.querySelector('.gallery');
-
-galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
+gallery.innerHTML = markup;
