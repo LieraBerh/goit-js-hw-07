@@ -15,6 +15,7 @@ a {
   padding: 32px;
   align-items: flex-start;
   gap: 16px;
+  background-color: #f6f6fe;
 }
 input {
   display: flex;
@@ -72,4 +73,7 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 44px;
+  padding: 32px;
+  background-color: #f6f6fe;
+  margin-top: 16px;
 }
