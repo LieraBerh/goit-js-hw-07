@@ -17,6 +17,8 @@ function createBoxes(amount) {
 
   boxesEl.innerHTML = '';
 
+  const boxesMarkup = [];
+
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
     const size = initialSize + i * 10;
@@ -26,8 +28,9 @@ function createBoxes(amount) {
     box.style.backgroundColor = getRandomHexColor();
     box.style.flexShrink = 0;
 
-    boxesEl.appendChild(box);
+    boxesMarkup.push(box);
   }
+  boxesEl.append(...boxesMarkup);
 }
 
 function destroyBoxes() {
