@@ -17,6 +17,7 @@ body {
 }
 
 .login-form {
+  width: 408px;
   display: inline-flex;
   padding: 24px;
   flex-direction: column;
@@ -25,13 +26,7 @@ body {
   border-radius: 8px;
   background: #fff;
 }
-input {
-  width: 360px;
-  height: 40px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  border: 1px solid #808080;
-}
+
 button {
   display: flex;
   padding: 8px 16px;
@@ -53,4 +48,42 @@ button {
 }
 button:hover {
   background: #6c8cff;
+}
+.login-form {
+  position: relative;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-form label input {
+  width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  padding: 8px 16px;
+}
+
+.login-form label input:hover {
+  border: 1px solid #000;
+}
+
+.login-form label:first-child {
+  margin-top: 0;
+}
+
+.login-form input:not(:focus)::placeholder {
+  color: transparent;
+}
+
+.login-form input:focus::placeholder {
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
 }

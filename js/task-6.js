@@ -24,6 +24,7 @@ function createBoxes(amount) {
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
+    box.style.flexShrink = 0;
 
     boxesEl.appendChild(box);
   }
