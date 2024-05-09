@@ -40,7 +40,8 @@ createEl.addEventListener('click', () => {
     createBoxes(amount);
     inputEl.value = '';
   } else {
-    alert('Please enter a number between 1 and 100.');
+    inputEl.value = '';
+    return;
   }
 });
 
